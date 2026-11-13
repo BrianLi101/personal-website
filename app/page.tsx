@@ -74,9 +74,9 @@ export default function Home() {
         <div className="hero-grain" aria-hidden="true" />
         <div className="hero-content">
           <p className="eyebrow"><span /> Angel investor</p>
-          <h1>I back founders who have the will to force a better version of the future into existence.</h1>
+          <h1>I want to be the first person you call when things go wrong.</h1>
           <p className="hero-copy">
-            On the slight chance I can help them along their journey.
+            I don't care if you're crying, have to shut down your company, or fire someone. I'm in it to support you in your vision of the world.
           </p>
           <a className="text-link" href="#portfolio">Explore the portfolio <Arrow /></a>
         </div>
@@ -180,13 +180,8 @@ export default function Home() {
       <section className="about-section section-shell" id="about">
         <div className="about-statement">
           <p className="section-kicker">How I invest</p>
-          <h2>Conviction is built in the details.</h2>
-          <p>I invest my own capital, stay close to the work, and try to be useful before a company’s story is obvious. The common thread is a founder with an earned insight and the agency to build around it.</p>
-        </div>
-        <div className="principles">
-          <article><span>01</span><div><h3>Non-consensus, not contrarian</h3><p>A different view only matters if it is grounded in a truer understanding of the customer, technology, or market.</p></div></article>
-          <article><span>02</span><div><h3>People before patterns</h3><p>Markets are legible. Exceptional founders are not. I care about the lived experience behind the insight.</p></div></article>
-          <article><span>03</span><div><h3>Long arcs, early chapters</h3><p>I am drawn to important work that compounds over years—and happiest getting involved near the beginning.</p></div></article>
+          <h2>I back founders who have the will to force a better version of the future into existence.</h2>
+          <p>On the slight chance I can help them along their journey.</p>
         </div>
       </section>
 
