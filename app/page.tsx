@@ -24,7 +24,6 @@ export default function Home() {
   const [beliefFilter, setBeliefFilter] = useState<BeliefId | "All">("All");
   const [query, setQuery] = useState("");
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const visibleCompanies = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -58,23 +57,17 @@ export default function Home() {
     };
   }, [selectedCompany]);
 
-  const closeMenu = () => setMenuOpen(false);
-
   return (
     <main>
-      <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Brian Li, home">Brian Li<span className="wordmark-dot">.</span></a>
-        <button className="menu-button" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-label="Toggle navigation">
-          <span />
-          <span />
-        </button>
-        <nav className={menuOpen ? "nav-open" : ""} aria-label="Primary navigation">
-          <a href="#beliefs" onClick={closeMenu}>Beliefs</a>
-          <a href="#portfolio" onClick={closeMenu}>Portfolio</a>
-          <a href="#about" onClick={closeMenu}>About</a>
-        </nav>
-        <span className="header-note">Early, curious, long-term.</span>
-      </header>
+      <div className="site-top">
+        <aside className="work-in-progress" aria-label="Website status">
+          This entire website is a <strong>work in progress.</strong>
+        </aside>
+        <header className="site-header">
+          <a className="wordmark" href="#top" aria-label="Brian Li, home">Brian Li<span className="wordmark-dot">.</span></a>
+          <span className="header-note">Early, curious, long-term.</span>
+        </header>
+      </div>
 
       <section className="hero" id="top">
         <div className="hero-art" aria-hidden="true" />

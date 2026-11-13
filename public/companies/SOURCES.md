@@ -44,3 +44,11 @@ Downloaded from official company sites and their image hosts. Files are stored l
 - `brev-dev.webp`: https://brev.nvidia.com/logos/svg/brev-logo.svg (official Brev logo)
 - `pathfinder.webp`: https://cdn.prod.website-files.com/68a75d965accdff4b761bf41/68e5744b5d63facf1087ca95_6824b93ad3b9bd622b8cf40c_osmo-webclip.png (logo displayed at https://pathfinder.xyz/)
 - `lightyear-expeditions.svg`: locally composed typographic cover using the name, gold/black palette, and orbit motif from https://joinlightyear.com/. The site has no downloadable company photo; this is a title treatment, not product photography or an official logo.
+- `anthrogen.webp`: https://www.anthrogen.com/ribosome/v1/poster.webp
+- `ligo-biosciences.webp`: https://ligo.bio/assets/ligobio-logo-black.png
+- `reticular-bio.webp`: https://reticular.com/assets/figma/hero-background.jpg
+- `batch-housing.webp`: https://batchhousing.com/brand-wordmark-og.png
+- `endorsed-ai.webp`: https://endorsed.com/opengraph-image.png?85450e2509d5759c
+- `maritime-fusion.webp`: https://cdn.prod.website-files.com/68c1131fd681d647a4af848a/68c122bf9f6eb26d8337cbfd_Opengraph.png
+- `autostep.webp`: https://autostep.ai/images/og-preview.png
+- `invictus.webp`: https://invictuspower.ai/_next/static/immutable/media/hero.27d6z6e0jrai5.jpg
