@@ -316,7 +316,7 @@ export const companies: Company[] = [
     year: "2025",
     stage: "Angel",
     description: "Lithography for the next generation of semiconductor scaling.",
-    beliefs: [],
+    beliefs: ["beyond-gpus"],
     thesis: "ASML is a bottleneck and monopoly in the manufacturing of chips. After reading Chip Wars, it was clear we were reaching the limits of our current eUV approach and needed another technological jump. Particle accelerators have finally advanced enough that they can empower the next gen machines.",
     founderInsight: "ASML has spent decades fine tuning a massive machine to optimize blasting lasers at a tin ball. Rohan taught me that to build next gen lithography, you can’t simply retool their existing machine. You need an entire design rebuilt around a smaller wave of light from the concavity of the mirrors to the materials that coat them.",
     accent: "amber",
