@@ -22,7 +22,6 @@ export type Company = {
   website?: string;
   image?: string;
   imagePosition?: string;
-  imageFit?: "cover" | "contain";
 };
 
 // Longer opinions can be added one by one without changing the belief strip.
@@ -82,7 +81,6 @@ export const companies: Company[] = [
   {
     id: "gutgutgoose",
     image: "/companies/gutgutgoose.webp",
-    imageFit: "contain",
     name: "Gutgutgoose",
     industry: "Health",
     year: "2026",
@@ -107,7 +105,6 @@ export const companies: Company[] = [
     accent: "silver",
     website: "https://www.aerogensystems.com/",
     image: "/companies/aerogen.webp",
-    imageFit: "contain",
   },
   {
     id: "meteoric",
@@ -233,7 +230,7 @@ export const companies: Company[] = [
     year: "2024",
     stage: "Angel",
     description: "Building low-cost cruise missiles",
-    beliefs: [],
+    beliefs: ["next-gen-manufacturing"],
     thesis: "I don’t usually invest in weapons companies, but it was clear to me that shooting out $2m Tomahawk missiles against small threats was not a viable strategy for defense. Alex pitched a way to drive down the cost to $100,000, paving the way for newer players to disrupt the defense tech giants. Cheaper weapons and competitor to monopolies is strictly better for the US economically and politically.",
     founderInsight: "",
     accent: "blue",
@@ -256,7 +253,6 @@ export const companies: Company[] = [
   {
     id: "rise-labs",
     image: "/companies/rise-labs.webp",
-    imageFit: "contain",
     name: "Rise Labs",
     industry: "Crypto",
     year: "2024",
@@ -270,7 +266,6 @@ export const companies: Company[] = [
   {
     id: "humanlayer",
     image: "/companies/humanlayer.webp",
-    imageFit: "contain",
     name: "HumanLayer",
     industry: "AI",
     year: "2024",
@@ -285,7 +280,6 @@ export const companies: Company[] = [
   {
     id: "openclinic",
     image: "/companies/openclinic.webp",
-    imageFit: "contain",
     name: "OpenClinic",
     industry: "Health",
     year: "2024",
@@ -300,7 +294,6 @@ export const companies: Company[] = [
   {
     id: "athenahq",
     image: "/companies/athenahq.webp",
-    imageFit: "contain",
     name: "AthenaHQ",
     industry: "AI",
     year: "2025",
@@ -315,7 +308,6 @@ export const companies: Company[] = [
   {
     id: "inversion-semiconductor",
     image: "/companies/inversion-semiconductor.webp",
-    imageFit: "contain",
     name: "Inversion Semiconductor",
     industry: "Hardware",
     year: "2025",
@@ -330,7 +322,6 @@ export const companies: Company[] = [
   {
     id: "orbital-operations",
     image: "/companies/orbital-operations.webp",
-    imageFit: "contain",
     name: "Orbital Operations",
     industry: "Space",
     year: "2025",
@@ -373,7 +364,6 @@ export const companies: Company[] = [
   {
     id: "paratus",
     image: "/companies/paratus.webp",
-    imageFit: "contain",
     name: "Paratus",
     industry: "Defense",
     year: "2025",
@@ -402,7 +392,6 @@ export const companies: Company[] = [
   {
     id: "petra-security",
     image: "/companies/petra-security.webp",
-    imageFit: "contain",
     name: "Petra Security",
     industry: "Software",
     year: "2025",
@@ -458,7 +447,6 @@ export const companies: Company[] = [
   {
     id: "reviewer3",
     image: "/companies/reviewer3.webp",
-    imageFit: "contain",
     name: "Reviewer3",
     year: "2026",
     stage: "Angel",
@@ -512,7 +500,6 @@ export const companies: Company[] = [
   {
     id: "adaptyv-biosystems",
     image: "/companies/adaptyv-biosystems.webp",
-    imageFit: "contain",
     name: "Adaptyv Biosystems",
     industry: "Biotech",
     year: "2021",
@@ -541,7 +528,6 @@ export const companies: Company[] = [
   {
     id: "brev-dev",
     image: "/companies/brev-dev.webp",
-    imageFit: "contain",
     name: "Brev.dev",
     industry: "AI",
     year: "2021",
@@ -556,7 +542,6 @@ export const companies: Company[] = [
   {
     id: "pathfinder",
     image: "/companies/pathfinder.webp",
-    imageFit: "contain",
     name: "Pathfinder",
     industry: "Crypto",
     year: "2025",
@@ -595,7 +580,6 @@ export const companies: Company[] = [
     accent: "violet",
     website: "https://ligo.bio/",
     image: "/companies/ligo-biosciences.webp",
-    imageFit: "contain",
   },
   {
     id: "reticular-bio",
@@ -624,7 +608,6 @@ export const companies: Company[] = [
     accent: "amber",
     website: "https://www.batchhousing.com/",
     image: "/companies/batch-housing.webp",
-    imageFit: "contain",
   },
   {
     id: "endorsed-ai",
@@ -639,7 +622,6 @@ export const companies: Company[] = [
     accent: "silver",
     website: "https://endorsed.com/",
     image: "/companies/endorsed-ai.webp",
-    imageFit: "contain",
   },
   {
     id: "maritime-fusion",
@@ -654,7 +636,6 @@ export const companies: Company[] = [
     accent: "blue",
     website: "https://www.maritimefusion.com/",
     image: "/companies/maritime-fusion.webp",
-    imageFit: "contain",
   },
   {
     id: "autostep",
@@ -669,7 +650,6 @@ export const companies: Company[] = [
     accent: "violet",
     website: "https://www.autostep.ai/",
     image: "/companies/autostep.webp",
-    imageFit: "contain",
   },
   {
     id: "invictus",

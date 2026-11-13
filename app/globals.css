@@ -93,11 +93,11 @@ button { color: inherit; }
 .belief-opinion h3 { margin: 10px 0 12px; font: 400 25px/1.2 Georgia, serif; }
 .belief-opinion p { margin: 0; color: var(--muted); font: 400 15px/1.7 Georgia, serif; }
 .company-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.company-card { padding: 0; text-align: left; background: #0b151a; border: 1px solid var(--line-strong); border-radius: 3px; overflow: hidden; cursor: pointer; transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.company-card { display: flex; flex-direction: column; padding: 0; text-align: left; background: #0b151a; border: 1px solid var(--line-strong); border-radius: 3px; overflow: hidden; cursor: pointer; transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
 .company-card:hover { transform: translateY(-5px); border-color: rgba(185,211,220,.48); box-shadow: 0 20px 50px rgba(0,0,0,.2); }
 .card-visual, .modal-visual { position: relative; overflow: hidden; background: #12222a; }
-.card-visual { height: 170px; border-bottom: 1px solid var(--line); }
-.company-card-image { z-index: 0; filter: saturate(.82) contrast(1.06) brightness(.78); transition: transform .5s ease; }
+.card-visual { width: 100%; height: 170px; flex-shrink: 0; border-bottom: 1px solid var(--line); }
+.company-card-image { object-fit: cover; z-index: 0; filter: saturate(.82) contrast(1.06) brightness(.78); transition: transform .5s ease; }
 .modal-visual .company-card-image { filter: saturate(.9) contrast(1.05) brightness(.82); }
 .company-card:hover .company-card-image { transform: scale(1.025); }
 .card-visual::before, .modal-visual::before { content: ""; position: absolute; z-index: 1; inset: 0; opacity: .6; pointer-events: none; background: repeating-linear-gradient(125deg, transparent 0 18px, rgba(255,255,255,.018) 19px 20px); }

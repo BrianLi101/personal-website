@@ -149,7 +149,7 @@ export default function Home() {
                       alt=""
                       fill
                       sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                      style={{ objectFit: company.imageFit ?? "cover", objectPosition: company.imagePosition ?? "center" }}
+                      style={{ objectPosition: company.imagePosition ?? "center" }}
                     />
                   )}
                   {company.industry && <span className="industry-pill">{company.industry}</span>}
@@ -203,7 +203,7 @@ export default function Home() {
                   alt=""
                   fill
                   sizes="(max-width: 760px) 100vw, 680px"
-                  style={{ objectFit: selectedCompany.imageFit ?? "cover", objectPosition: selectedCompany.imagePosition ?? "center" }}
+                  style={{ objectPosition: selectedCompany.imagePosition ?? "center" }}
                 />
               )}
               {selectedCompany.industry && <span className="industry-pill">{selectedCompany.industry}</span>}
