@@ -61,7 +61,7 @@ export default function Home() {
     <main>
       <div className="site-top">
         <aside className="work-in-progress" aria-label="Website status">
-          This entire website is a <strong>work in progress.</strong>
+          This entire website is a <strong>work in progress.</strong> Ignore anything clearly AI generated.
         </aside>
         <header className="site-header">
           <a className="wordmark" href="#top" aria-label="Brian Li, home">Brian Li<span className="wordmark-dot">.</span></a>
