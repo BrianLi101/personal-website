@@ -1,4 +1,4 @@
-export type BeliefId = "climate-economics" | "beyond-gpus";
+export type BeliefId = "climate-economics" | "beyond-gpus" | "engineerable-biology";
 
 export type Belief = {
   id: BeliefId;
@@ -36,6 +36,11 @@ export const beliefs: Belief[] = [
     id: "beyond-gpus",
     number: "02",
     motto: "Computing evolves beyond GPUs",
+  },
+  {
+    id: "engineerable-biology",
+    number: "03",
+    motto: "Biology becomes engineerable",
   },
 ];
 
@@ -508,7 +513,7 @@ export const companies: Company[] = [
     year: "2021",
     stage: "Angel",
     description: "We're building fully automated labs for protein engineering",
-    beliefs: [],
+    beliefs: ["engineerable-biology"],
     thesis: "",
     founderInsight: "",
     accent: "violet",
@@ -522,7 +527,7 @@ export const companies: Company[] = [
     year: "2021",
     stage: "Angel",
     description: "Immune cell organoids to cure disease",
-    beliefs: [],
+    beliefs: ["engineerable-biology"],
     thesis: "",
     founderInsight: "",
     accent: "green",
@@ -565,7 +570,7 @@ export const companies: Company[] = [
     year: "2024",
     stage: "Angel",
     description: "An AI research lab for the biological sciences.",
-    beliefs: [],
+    beliefs: ["engineerable-biology"],
     thesis: "",
     founderInsight: "",
     accent: "green",
@@ -579,7 +584,7 @@ export const companies: Company[] = [
     year: "2024",
     stage: "Angel",
     description: "Ligo builds next-gen tooling to manipulate chemistry and biology, starting with enzyme design.",
-    beliefs: [],
+    beliefs: ["engineerable-biology"],
     thesis: "",
     founderInsight: "",
     accent: "violet",
@@ -594,7 +599,7 @@ export const companies: Company[] = [
     year: "2024",
     stage: "Angel",
     description: "Reticular is a reproductive-genetics company that provides pregnancy-loss genetic screening for people TTC and IVF.",
-    beliefs: [],
+    beliefs: ["engineerable-biology"],
     thesis: "",
     founderInsight: "",
     accent: "rose",
