@@ -1,4 +1,4 @@
-export type BeliefId = "climate-economics" | "beyond-gpus" | "engineerable-biology";
+export type BeliefId = "climate-economics" | "beyond-gpus" | "engineerable-biology" | "next-gen-manufacturing";
 
 export type Belief = {
   id: BeliefId;
@@ -41,6 +41,11 @@ export const beliefs: Belief[] = [
     id: "engineerable-biology",
     number: "03",
     motto: "Biology becomes engineerable",
+  },
+  {
+    id: "next-gen-manufacturing",
+    number: "04",
+    motto: "Next gen manufacturing",
   },
 ];
 
@@ -96,7 +101,7 @@ export const companies: Company[] = [
     year: "2026",
     stage: "Angel",
     description: "Eliminating the need for cleanrooms in semiconductor manufacturing",
-    beliefs: [],
+    beliefs: ["next-gen-manufacturing"],
     thesis: "As chips get smaller, the impact of each contaminant on a batch of chips grows larger and lowers yield. In order to maintain our pace of semiconductor density, we need a better system than clean rooms and pure nitrogen gas for squeezing out molecular contaminants.",
     founderInsight: "Every tool along the chip fab supply chain from ASML to Applied Materials has an incentive to increase the yield of their machine. The existing market for filtration is a fragmented set of legacy players that are reliant on HEPA filters and pumping costly purified nitrogen into FOUPs.",
     accent: "silver",
@@ -125,7 +130,7 @@ export const companies: Company[] = [
     year: "2026",
     stage: "Angel",
     description: "We make silicon on the Moon, to power everything in space.",
-    beliefs: ["climate-economics"],
+    beliefs: ["climate-economics", "next-gen-manufacturing"],
     thesis: "If the space economy is going to materialize, then the best way to grow it requires us to leverage resources in space instead of continuously punching holes in the atmosphere. Ross and Bam have been working on this concept for years. They originally raised funding too early and had to lay off their team to stay scrappy. But SpaceX launch capabilities have advanced far enough that the space economy is possible now. This is their life’s work and a hill they will die on.",
     founderInsight: "",
     accent: "amber",
@@ -316,7 +321,7 @@ export const companies: Company[] = [
     year: "2025",
     stage: "Angel",
     description: "Lithography for the next generation of semiconductor scaling.",
-    beliefs: ["beyond-gpus"],
+    beliefs: ["beyond-gpus", "next-gen-manufacturing"],
     thesis: "ASML is a bottleneck and monopoly in the manufacturing of chips. After reading Chip Wars, it was clear we were reaching the limits of our current eUV approach and needed another technological jump. Particle accelerators have finally advanced enough that they can empower the next gen machines.",
     founderInsight: "ASML has spent decades fine tuning a massive machine to optimize blasting lasers at a tin ball. Rohan taught me that to build next gen lithography, you can’t simply retool their existing machine. You need an entire design rebuilt around a smaller wave of light from the concavity of the mirrors to the materials that coat them.",
     accent: "amber",
@@ -388,7 +393,7 @@ export const companies: Company[] = [
     year: "2025",
     stage: "Angel",
     description: "2-day CNC Machining",
-    beliefs: [],
+    beliefs: ["next-gen-manufacturing"],
     thesis: "If we want manufacturing to move to the US, the entire innovation chain needs to move. American companies waiting weeks to receive prototype parts will always be outcompeted by those in China that can get them in a matter of hours.",
     founderInsight: "",
     accent: "blue",
@@ -471,7 +476,7 @@ export const companies: Company[] = [
     year: "2026",
     stage: "Angel",
     description: "Autonomous construction on Earth and beyond",
-    beliefs: [],
+    beliefs: ["next-gen-manufacturing"],
     thesis: "",
     founderInsight: "",
     accent: "green",
@@ -513,7 +518,7 @@ export const companies: Company[] = [
     year: "2021",
     stage: "Angel",
     description: "We're building fully automated labs for protein engineering",
-    beliefs: ["engineerable-biology"],
+    beliefs: ["engineerable-biology", "next-gen-manufacturing"],
     thesis: "",
     founderInsight: "",
     accent: "violet",
