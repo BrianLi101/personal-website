@@ -61,9 +61,6 @@ button { color: inherit; }
 .text-link { display: inline-flex; align-items: center; gap: 18px; font-size: 13px; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,.48); }
 .text-link span { transition: transform .2s ease; }
 .text-link:hover span { transform: translateX(4px); }
-.hero-aside { position: absolute; z-index: 2; right: clamp(24px, 6vw, 96px); bottom: 122px; width: min(380px, 30vw); padding-left: 24px; border-left: 1px solid rgba(255,255,255,.55); }
-.hero-aside p { font: 400 20px/1.4 Georgia, "Times New Roman", serif; margin: 0 0 12px; }
-.hero-aside span { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }
 .scroll-cue { position: absolute; z-index: 2; bottom: 30px; left: clamp(24px, 5vw, 82px); display: flex; align-items: center; gap: 14px; color: #778b92; text-transform: uppercase; font-size: 9px; letter-spacing: .18em; }
 .scroll-cue i { width: 64px; height: 1px; background: #52636a; }
 
@@ -127,6 +124,7 @@ button { color: inherit; }
 .brand-mark { width: 30px; height: 30px; display: grid; place-items: center; flex: 0 0 auto; background: #eef2ef; color: #0b1215; border-radius: 50%; font: 700 10px/1 Georgia, serif; }
 .company-name h3 { margin: 0; font: 400 21px/1.1 Georgia, serif; }
 .card-body > p { color: #a4b3b8; font-size: 12px; line-height: 1.55; min-height: 38px; margin: 13px 0 18px; }
+.company-summary { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; overflow-wrap: anywhere; }
 .belief-tags { display: flex; flex-wrap: wrap; gap: 6px; min-height: 48px; }
 .belief-tags span, .modal-tags span { border: 1px solid var(--line); color: #8fa1a7; border-radius: 2px; padding: 5px 7px; font-size: 8px; text-transform: uppercase; letter-spacing: .08em; }
 .card-footer { display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 14px; margin-top: 15px; color: #75878c; font-size: 9px; text-transform: uppercase; letter-spacing: .07em; }
@@ -161,6 +159,7 @@ footer > span { justify-self: end; }
 .thesis-block { border-top: 1px solid var(--line); padding: 26px 0; }
 .thesis-block > span { color: var(--accent); font-size: 9px; text-transform: uppercase; letter-spacing: .16em; }
 .thesis-block p { color: #b1bec2; font-size: 14px; line-height: 1.7; margin: 12px 0 0; }
+.thesis-block p { white-space: pre-line; }
 .company-website { display: inline-flex; align-items: center; gap: 12px; margin-top: 12px; padding-bottom: 7px; border-bottom: 1px solid #60747a; color: #dce6e6; font-size: 12px; font-weight: 600; }
 .company-website span { transition: transform .2s ease; }
 .company-website:hover span { transform: translate(2px, -2px); }
@@ -171,7 +170,6 @@ footer > span { justify-self: end; }
 @media (max-width: 1100px) {
   .site-header { grid-template-columns: 1fr auto; }
   .header-note { display: none; }
-  .hero-aside { display: none; }
   .company-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .belief-strip { grid-template-columns: 110px 1fr; }
   .strip-arrow { display: none; }

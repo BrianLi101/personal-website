@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>Lightyear Expeditions</title>
+  <rect width="1200" height="630" fill="#03040a"/>
+  <g fill="none" stroke="#c9a84c" stroke-opacity=".18">
+    <circle cx="600" cy="315" r="190"/>
+    <circle cx="600" cy="315" r="270"/>
+    <circle cx="600" cy="315" r="350"/>
+    <circle cx="600" cy="315" r="430"/>
+  </g>
+  <g fill="#c9a84c">
+    <circle cx="600" cy="45" r="4"/>
+    <circle cx="250" cy="315" r="4"/>
+    <circle cx="790" cy="315" r="3"/>
+  </g>
+  <rect x="280" y="230" width="640" height="170" rx="8" fill="#03040a"/>
+  <text x="600" y="305" text-anchor="middle" fill="#f5f2ec" font-family="Georgia, serif" font-size="70" letter-spacing="6">Lightyear</text>
+  <text x="600" y="362" text-anchor="middle" fill="#c9a84c" font-family="Georgia, serif" font-size="24" letter-spacing="9">EXPEDITIONS</text>
+</svg>

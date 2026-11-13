@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { beliefs, companies, type BeliefId, type Company } from "@/data/portfolio";
 
-const industries = ["All", ...Array.from(new Set(companies.map((company) => company.industry)))];
+const industries = ["All", ...Array.from(new Set(companies.flatMap((company) => company.industry ? [company.industry] : [])))];
+const firstInvestmentYear = Math.min(...companies.map((company) => Number(company.year)).filter((year) => year > 0));
 
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return <span aria-hidden="true">{diagonal ? "↗" : "→"}</span>;
@@ -36,7 +37,7 @@ export default function Home() {
           return `${belief?.motto ?? ""} ${belief?.opinion ?? ""}`;
         })
         .join(" ");
-      const matchesQuery = !normalized || `${company.name} ${company.description} ${company.industry} ${beliefNames}`.toLowerCase().includes(normalized);
+      const matchesQuery = !normalized || `${company.name} ${company.description} ${company.industry ?? ""} ${company.website ?? ""} ${company.thesis} ${company.founderInsight} ${beliefNames}`.toLowerCase().includes(normalized);
       return matchesIndustry && matchesBelief && matchesQuery;
     });
   }, [beliefFilter, industry, query]);
@@ -86,10 +87,6 @@ export default function Home() {
           </p>
           <a className="text-link" href="#portfolio">Explore the portfolio <Arrow /></a>
         </div>
-        <div className="hero-aside">
-          <p>“The best investments begin as a point of view about how the world should work.”</p>
-          <span>— My approach</span>
-        </div>
         <div className="scroll-cue"><span>Scroll to explore</span><i /></div>
       </section>
 
@@ -121,7 +118,7 @@ export default function Home() {
             <div>
               <p className="section-kicker">Selected investments</p>
               <h2>The portfolio.</h2>
-              <p className="portfolio-meta">{companies.length} companies <span>·</span> 2026 — present</p>
+              <p className="portfolio-meta">{companies.length} companies <span>·</span> {firstInvestmentYear} — present</p>
             </div>
             <label className="search-box">
               <span aria-hidden="true">⌕</span>
@@ -162,17 +159,19 @@ export default function Home() {
                       style={{ objectFit: company.imageFit ?? "cover", objectPosition: company.imagePosition ?? "center" }}
                     />
                   )}
-                  <span className="industry-pill">{company.industry}</span>
+                  {company.industry && <span className="industry-pill">{company.industry}</span>}
                   {company.draft && <span className="draft-pill">Draft record</span>}
                   {!company.image && <><div className="orb orb-one" /><div className="orb orb-two" /></>}
                   <span className="open-icon"><Arrow diagonal /></span>
                 </div>
                 <div className="card-body">
                   <div className="company-name"><BrandMark name={company.name} /><h3>{company.name}</h3></div>
-                  <p>{company.description}</p>
-                  <div className="belief-tags">
+                  {company.description && (
+                    <p className="company-summary">{company.description}</p>
+                  )}
+                  {company.beliefs.length > 0 && <div className="belief-tags">
                     {company.beliefs.map((id) => <span key={id}>{beliefs.find((belief) => belief.id === id)?.motto}</span>)}
-                  </div>
+                  </div>}
                   <div className="card-footer"><span>Invested {company.year}</span><i /> <span>{company.stage}</span></div>
                 </div>
               </button>
@@ -219,13 +218,13 @@ export default function Home() {
                   style={{ objectFit: selectedCompany.imageFit ?? "cover", objectPosition: selectedCompany.imagePosition ?? "center" }}
                 />
               )}
-              <span className="industry-pill">{selectedCompany.industry}</span>
+              {selectedCompany.industry && <span className="industry-pill">{selectedCompany.industry}</span>}
               {!selectedCompany.image && <><div className="orb orb-one" /><div className="orb orb-two" /></>}
             </div>
             <div className="modal-content">
               <div className="company-name"><BrandMark name={selectedCompany.name} /><h2 id="company-modal-title">{selectedCompany.name}</h2></div>
-              <p className="modal-description">{selectedCompany.description}</p>
-              <div className="modal-tags">{selectedCompany.beliefs.map((id) => <span key={id}>{beliefs.find((belief) => belief.id === id)?.motto}</span>)}</div>
+              {selectedCompany.description && <p className="modal-description">{selectedCompany.description}</p>}
+              {selectedCompany.beliefs.length > 0 && <div className="modal-tags">{selectedCompany.beliefs.map((id) => <span key={id}>{beliefs.find((belief) => belief.id === id)?.motto}</span>)}</div>}
               {selectedCompany.thesis && <div className="thesis-block"><span>Investment thesis</span><p>{selectedCompany.thesis}</p></div>}
               {selectedCompany.founderInsight && <div className="thesis-block"><span>Founder insight</span><p>{selectedCompany.founderInsight}</p></div>}
               {selectedCompany.website && (
