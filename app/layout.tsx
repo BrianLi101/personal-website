@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Brian Li — Angel Investor",
   description:
-    "Brian Li backs founders building the systems, products, and institutions of an extraordinary future.",
+    "I want to be the first person you call when things go wrong.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
